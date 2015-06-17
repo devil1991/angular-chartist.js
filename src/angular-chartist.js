@@ -84,7 +84,7 @@ function AngularChartistDirective() {
         controller: 'AngularChartistCtrl',
         link: function(scope, element, attrs, Ctrl) {
             Ctrl.element = element[0];
-            chart = Ctrl.chart;
+            var chart = Ctrl.chart;
             scope.$on('SOFTUPDATE',function(){
                 setTimeout(function(){chart.update();},50);
             });
